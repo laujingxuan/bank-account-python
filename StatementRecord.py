@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 
 
 class StatementRecord:
@@ -6,7 +6,7 @@ class StatementRecord:
         self.amount = amount
         self.balance = balance
         now = datetime.now()
-        timeString = now.strftime("%w %b %Y %I:%M:%S%p")
+        timeString = now.strftime("%W %b %Y %I:%M:%S%p")
         self.time = timeString
 
     def retrieveStatementRecord(self):

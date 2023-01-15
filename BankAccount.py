@@ -6,7 +6,7 @@ class BankAccount:
         self.records = StatementRecords()
 
     def withdraw(self, amount):
-        if amount <= 0 or self.balance > amount:
+        if amount <= 0 or self.balance < amount:
             return False
         self.balance -= amount
         self.records.addRecord(-amount, self.balance)

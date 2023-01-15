@@ -4,16 +4,20 @@ def main():
     account = BankAccount()
     print("Welcome to MyMy Bank! What would you like to do?")
     while True:
-        action = input('[D]eposit\n[W]ithdraw\n[P]rint statement\n[Q]uit')
+        action = input('[D]eposit\n[W]ithdraw\n[P]rint statement\n[Q]uit\n')
         if action == "d" or action == "D":
             amount = input("Please enter the amount to deposit: ")
-            #Deposit()
+            while not isDigit(amount) or not account.deposit(int(amount)):
+                amount = input("Invalid amount. Please enter again: ")
+            print("Thank you. $%.2f has been deposited to your account." %int(amount))
         elif action == "w" or action == "W":
-            #Withdraw()
+            amount = input("Please enter the amount to withdraw: ")
+            while not isDigit(amount) or not account.withdraw(int(amount)):
+                amount = input("Invalid amount. Please enter again: ")
+            print("Thank you. $%.2f has been withdrawn." %int(amount))
         elif action == "p" or action == "P":
-            #PrintStatement()
+            account.printStatement()
         elif action == "q" or action == "Q":
-            isExit = True
             break
         else:
             print("Invalid action entered. Please try again.")
