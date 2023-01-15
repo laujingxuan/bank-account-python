@@ -1,4 +1,4 @@
-from StatementRecord import StatementRecord
+from classes.StatementRecord import StatementRecord
 
 class StatementRecords:
     def __init__(self):

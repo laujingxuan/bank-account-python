@@ -1,4 +1,4 @@
-from BankAccount import BankAccount
+from classes.BankAccount import BankAccount
 
 def main():
     account = BankAccount()

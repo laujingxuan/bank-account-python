@@ -1,4 +1,4 @@
-from StatementRecords import StatementRecords
+from classes.StatementRecords import StatementRecords
 
 class BankAccount:
     def __init__(self):
